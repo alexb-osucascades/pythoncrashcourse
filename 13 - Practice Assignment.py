@@ -14,7 +14,13 @@ def even_numbers(num):
     # write your code here    
 
     # replace the return value your even number list
-    return []
+    intergerList = []
+    for i in range(0, num):
+        if i % 2 == 0:
+            intergerList.append(i)
+    
+        
+    return intergerList
 
 
 
