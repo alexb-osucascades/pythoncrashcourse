@@ -18,7 +18,7 @@
 # look at the following code:
 
 x = 1
-    y = 2
+y = 2
 
 # VSCode is able to notify you of indentation issues with your code, and it is represented with the red squiggly line
 
@@ -32,7 +32,7 @@ x = 1
 # this indicates that the content below is part of the procedure above
 
 if x < y:
-print("hello")
+    print("hello")
 
 
 # Run the code and read through the error carefully
@@ -55,7 +55,7 @@ print("hello")
 # One of the most common examples is when you want to compare two values for equality
 # This is supposed to be done with ==, however, we sometimes forget and use = instead
 
-if x = y:
+if x == y:
     print("they are equal")
 
 
@@ -101,7 +101,7 @@ my_variable += 1
 
 x = "20" # this looks like an integer (number), but it's actually a string because of the "" around it
 
-y = x / 5
+y = int(x) / 5
 
 # Run the code and read through the error carefully
 
@@ -123,7 +123,7 @@ y = x / 5
 
 my_list = ["D", "A", "N"]
 
-print(my_list[3])
+print(my_list[2])
 
 # Remember that indexing of items starts at zero, so my_list[0] is "D", my_list[1] is "A", and my_list[2] is "N"
 # This means that my_list[3] doesn't exist!
@@ -147,7 +147,7 @@ print(my_list[3])
 
 # just like in math class, you are not allowed to divide by zero
 
-x = 0
+x = 1
 y = 5
 
 z = y / x
@@ -172,7 +172,7 @@ z = y / x
 # For example, as we know, int() can cast a string as an integer, so it does allow strings
 # however, the string must be a numerical value. There is no way to change a word into a number using int()
 
-int("Hello World!")
+int("1")
 
 # Run this code and read through the error carefully
 
@@ -199,7 +199,7 @@ int("Hello World!")
 # you can raise any error you like and add a message with it.
 # In this case ValueError seems the most appropriate, so I chose that
 
-x = 105
+x = 99
 
 if x < 1 or x > 100:
     raise ValueError("The number must be between 1 and 100")

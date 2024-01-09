@@ -47,12 +47,12 @@ my_function(1)
 # Problem 1: Factorial
 def factorial(num):
     # change True to the exit condition
-    if True:
+    if num <= 1:
         # change this to our base case
-        return 
+        return 1
     else:
         # change this to the recursive case
-        return factorial(num)
+        return num * factorial(num - 1)
 
 
 print("10! = ", factorial(10))
@@ -63,12 +63,12 @@ print("10! = ", factorial(10))
 
 def fibonacci(num):
     # change True to the exit condition
-    if True:
+    if num <= 2:
         # change this to our base case
-        return 
+        return 1
     else:
         # change this to the recursive case
-        return fibonacci(num) 
+        return fibonacci(num - 1) + fibonacci(num - 2) 
 
 
 print("fibonacci(10) = ",fibonacci(10))
@@ -78,7 +78,18 @@ print("fibonacci(10) = ",fibonacci(10))
 
 # We'll work on this one in class (if there's time)
 def hanoi_move(start, end):
-    return
+    return print (f"Move {start} To {end}")
 
-def hanoi(num):
+def hanoi(num, start, through, end):
+    # number of discs
+    if num == 0:
+        pass
+    else:
+        # recursive logic
+        hanoi(num - 1, start, end, through)
+        hanoi_move(start, end)
+        hanoi(num - 1, through, start, end)
+
     return 
+
+hanoi(4, "A", "B", "C")
